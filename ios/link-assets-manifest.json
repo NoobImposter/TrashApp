@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "Assets/Fonts/Boldfont.ttf",
+      "sha1": "7d6b1f66d4bb15739f8809d7440e888d86a2f1bd"
+    },
+    {
+      "path": "Assets/Fonts/Mainfont.ttf",
+      "sha1": "8ecb91a31a4dc62ae7a79b0c9702ac2615460424"
+    },
+    {
+      "path": "Assets/Fonts/Numberfont.ttf",
+      "sha1": "6de8952ca08d27ee77f57347d2cef4b4e26aa78f"
+    },
+    {
+      "path": "Assets/Fonts/Poppins-Black.ttf",
+      "sha1": "645e04c53c6b5b35bce654a811ebce16af8aa721"
+    }
+  ]
+}

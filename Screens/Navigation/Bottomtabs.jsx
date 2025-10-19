@@ -3,9 +3,9 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-import { Marketplacehome } from '../Marketplace/index'
-import { PointsHome } from '../Points/index'
-import { Homepage } from '../Homepage/index'
+import  Marketplacehome  from '../Marketplace/index'
+import  PointsHome  from '../Points/index'
+import  Homepage  from '../Homepage/index'
 
 const Tab = createBottomTabNavigator()
 

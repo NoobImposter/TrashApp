@@ -52,11 +52,13 @@ const DataTabs = () => {
 const Styles=StyleSheet.create({
     mainbox:{
         width:ScreenWidth*0.95,
-        height:ScreenHieght *0.4,
-        backgroundColor:"#00000",
+        height:ScreenHieght*0.53,
+        
+        backgroundColor:"#ffffffff",
         marginTop:ScreenHieght*0.03,
         alignItems:"center",
         flexDirection:"column"
+        
     },
     Textcontainer:{
         width:"40%",
@@ -71,7 +73,9 @@ const Styles=StyleSheet.create({
         overflow:"hidden",
         height:"100%",
     },
-   MaindataContainer:{ width:"100%", height:"60%",
+   MaindataContainer:{ width:"100%",
+    
+    height:ScreenHieght*0.25,
     
     borderRadius:50
     
@@ -86,7 +90,7 @@ const Styles=StyleSheet.create({
     },
     smalldatacontainer:{
         width:"100%",
-        height:"40%",
+        height:ScreenHieght*0.2,
         backgroundColor:"#ffffffff",
         padding:"2%",
         alignItems:"flex-start",

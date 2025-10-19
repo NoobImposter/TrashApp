@@ -11,7 +11,7 @@ export const GlobalStyles = StyleSheet.create({
         height:Hieht,
 
         alignItems:"center",
-        alignSelf:"center",
+        
         marginTop:Width*0.02,
             backgroundColor:"#ffffff"
     
@@ -20,8 +20,10 @@ export const GlobalStyles = StyleSheet.create({
         width:Width*0.95,
         height:Hieht,
          marginTop:Width*0.02,
-          alignItems:"center",
+          
         alignSelf:"center",
+        flexDirection:"column",
+        
         backgroundColor:"#ffffff"
 
     },

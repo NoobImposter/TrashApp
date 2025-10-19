@@ -2,7 +2,7 @@ import { View, Text } from 'react-native';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faUser, faHome, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faShop ,faCoins} from '@fortawesome/free-solid-svg-icons';
 import Marketplacehome from '../Marketplace/index';
 import PointsHome from '../Points/index';
 import Homepage from '../Homepage/index';
@@ -22,9 +22,9 @@ const Bottomtabs = () => {
           if (route.name === 'Home') {
             iconName = faHome;
           } else if (route.name === 'Points') {
-            iconName = faGear;
+            iconName = faCoins;
           } else if (route.name === 'Market') {
-            iconName = faUser;
+            iconName = faShop;
           }
           return <FontAwesomeIcon icon={iconName} size={25} color={color} />;
         },

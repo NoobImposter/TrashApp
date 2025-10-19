@@ -18,9 +18,10 @@ export const GlobalStyles = StyleSheet.create({
     },
     CompnenetsScreen:{
         width:Width*0.95,
-        height:Hieht,
+        height:Hieht*0.95,
          marginTop:Width*0.02,
           
+          alignItems:"center",
         alignSelf:"center",
         flexDirection:"column",
         

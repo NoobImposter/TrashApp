@@ -11,7 +11,7 @@ const { height: ScreenHeight } = Dimensions.get('window');
 const RecentTab = ({ day, line, kgs }) => {
   return (
     <View style={styles.container}>
-      <FontAwesomeIcon icon={faStarOfLife} size={25} color="#000" />
+      <FontAwesomeIcon icon={faStarOfLife} size={20} color="#000" />
      
       
       <View>

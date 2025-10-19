@@ -75,7 +75,7 @@ const Recents = () => {
 const styles = StyleSheet.create({
   maincontainer: {
     width: '100%',
-
+    
     backgroundColor: 'white',
     alignItems: 'center',
     flexDirection: 'column',

@@ -2,8 +2,11 @@
 import {StyleSheet, View,ImageBackground, Image,Text ,Dimensions} from 'react-native'
 import React from 'react'
 import { GlobalStyles } from '../../Styles'
+import { faSheetPlastic ,faReceipt,faPaperclip} from '@fortawesome/free-solid-svg-icons';
 
 import Smalldata from "../Components/Smalldata"
+import { icon } from '@fortawesome/fontawesome-svg-core'
+
 
 const ScreenWidth=Dimensions.get("window").width
 const ScreenHieght=Dimensions.get("window").height
@@ -11,13 +14,13 @@ const ScreenHieght=Dimensions.get("window").height
 const DataTabs = () => {
     const SmalltabsData=[
         {
-        name:"Plastic",value:"50 kg",backcolor:"#3E363F"
+        name:"Plastic",value:"50 kg",backcolor:"#7DDE92",icon:faSheetPlastic
     },
     {
-        name:"Paper",value:"50 kg",backcolor:"#3E363F"
+        name:"Paper",value:"50 kg",backcolor:"#7DDE92",icon:faPaperclip
     },
     {
-        name:"Metal",value:"50 kg",backcolor:"#3E363F"
+        name:"Metal",value:"50 kg",backcolor:"#7DDE92",icon:faReceipt   
     }
 ]
   return (
@@ -42,7 +45,10 @@ const DataTabs = () => {
       <View style={Styles.smalldatacontainer}>
         {
             SmalltabsData.map((value,index)=>(
-                <Smalldata key={index} anme={value.name} number={value.value} backcolor={value.backcolor}/>
+                <Smalldata key={index} anme={value.name} 
+                Icon={value.icon}
+                
+                number={value.value} backcolor={value.backcolor}/>
 
             ))
         }

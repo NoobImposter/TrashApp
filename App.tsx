@@ -7,9 +7,7 @@ import Bottomtabs from "./Screens/Navigation/Bottomtabs"
 const App = () => {
   return (
     <NavigationContainer>
-    {/* <View style={GlobalStyles.screen}>
-      <Homepage />
-    </View> */}
+ 
     <Bottomtabs/>
     </NavigationContainer>
   )

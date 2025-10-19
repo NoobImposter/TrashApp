@@ -1,11 +1,18 @@
 import { View, Text,StyleSheet } from 'react-native'
 import React from 'react'
 import { GlobalStyles } from '../../Styles'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faSheetPlastic ,faReceipt,faPaperclip} from '@fortawesome/free-solid-svg-icons';
 
-const Smalldata = ({number,anme,backcolor}) => {
+
+
+
+const Smalldata = ({number,anme,backcolor,Icon}) => {
+
+  
   return (
     <View style={[styles.smalldata,{backgroundColor:backcolor}]}>
-    
+     <FontAwesomeIcon icon={Icon} size={32} color="#000" />
       <Text style={{fontFamily:"Mainfont",fontSize:27,fontWeight:"600",color:"white"}}>{anme}</Text>
       <Text style={{fontFamily:"Numberfont",fontSize:22,color:"white"}}>{number}</Text>
     </View>

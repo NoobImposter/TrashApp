@@ -1,90 +1,101 @@
-import { View,Text, StyleSheet ,Dimensions,ScrollView} from 'react-native'
-import React from 'react'
-import RecentTab from './RecentTab'
+import { View, Text, StyleSheet, Dimensions, ScrollView } from 'react-native';
+import React from 'react';
+import RecentTab from './RecentTab';
+import { GlobalStyles } from '../../Styles';
 
+const { height, width } = Dimensions.get('window');
 
-const height=Dimensions.get("window").height
-const width=Dimensions.get("window").width
 const Recents = () => {
-    const Data=[{
-        day:"Tuesday",
-        line:"Metal Day",
-        wieght:"10 kg"
+  const Data = [
+    {
+      day: 'Tuesday',
+      line: 'Metal Day',
+      weight: '10 kg',
     },
     {
-        day:"Tuesday",
-        line:"Metal Day",
-        wieght:"10 kg"
+      day: 'Tuesday',
+      line: 'Metal Day',
+      weight: '10 kg',
     },
     {
-        day:"Tuesday",
-        line:"Metal Day",
-        wieght:"10 kg"
+      day: 'Tuesday',
+      line: 'Metal Day',
+      weight: '10 kg',
     },
-
-
-]
+    // Added more items to ensure content exceeds ScrollView height
+    {
+      day: 'Wednesday',
+      line: 'Plastic Day',
+      weight: '15 kg',
+    },
+    {
+      day: 'Thursday',
+      line: 'Glass Day',
+      weight: '12 kg',
+    },
+  ];
 
   return (
-    <View  style={Styles.maincontainer}>
-
-        <View style={{
-            width:width*0.95,
-            flexDirection:"row",
-            alignItems:"flex-start",
-            justifyContent:"center"
-        }}>
-            <View
-            style={{width:"50%",
-               alignItems:"flex-start"
-            }}
-
-            >
-                <Text>Recent</Text>
-            </View>
-            <View
-            
-               style={{width:"50%",
-                alignItems:"flex-end"
-                
-               }}
-            >
-                <Text>View More</Text>
-            </View>
+    <View style={styles.maincontainer}>
+      <View
+        style={{
+          width: width * 0.95,
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          paddingHorizontal: 10,
+          paddingVertical: 10,
+        }}
+      >
+        <View style={{ width: '60%', alignItems: 'flex-start' }}>
+          <Text style={[GlobalStyles.heading,{fontSize:22}]}>Recent Disposables</Text>
         </View>
-        <ScrollView contentContainerStyle={Styles.scrollcontent}
-        showsVerticalScrollIndicator={false}>
-
-        
-        {
-            Data.map((Value,index)=>(
-                <RecentTab key={index} day={Value.day} line={Value.line} kgs={Value.wieght}/>
-            ))
-        }
-        </ScrollView>
-    
-     
-    
+        <View style={{ width: '40%', alignItems: 'flex-end' }}>
+          <Text style={styles.headerText}>View More</Text>
+        </View>
+      </View>
+      <ScrollView
+        style={styles.scrollView} // Added explicit style for ScrollView
+        contentContainerStyle={styles.scrollcontent}
+        showsVerticalScrollIndicator={true} // Enabled for debugging
+      >
+        {Data.map((value, index) => (
+          <RecentTab
+            key={index}
+            day={value.day}
+            line={value.line}
+            kgs={value.weight}
+          />
+        ))}
+      </ScrollView>
     </View>
-  )
-}
+  );
+};
 
+const styles = StyleSheet.create({
+  maincontainer: {
+    width: '100%',
 
+    backgroundColor: 'white',
+    alignItems: 'center',
+    flexDirection: 'column',
+    flex: 1, // Allow container to grow
+  },
+  scrollView: {
+    width: '100%', // Ensure ScrollView takes full width
+    flexGrow: 1, // Allow ScrollView to expand within parent
+  },
+  scrollcontent: {
+    width: width * 0.95,
+    alignItems: 'center',
+    paddingVertical: 10,
+    paddingBottom: 30, // Ensure last card is fully visible
+  },
+  headerText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'black',
+  },
+});
 
-const Styles=StyleSheet.create({
-    maincontainer:{
-        width:"100%",
-        height:height*0.45,
-        backgroundColor:"white",
-        alignItems:"center",
-        flexDirection:"column"
-    },
-    scrollcontent:{
-        width:width*0.95,
-       
-        alignItems:"center",
-        paddingVertical:10
-    }
-})
-
-export default Recents
+export default Recents;

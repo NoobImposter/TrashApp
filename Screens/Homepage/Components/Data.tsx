@@ -28,8 +28,10 @@ const DataTabs = () => {
             <ImageBackground source={require("../../../Assets/Images/HomePage/background.webp")} style={Styles.maindata} 
             resizeMode="cover"
             imageStyle={{borderRadius:10,opacity:0.13,backgroundColor:"green"}}>
+                <View style={{padding:"5%"}}>
                 <Text style={[GlobalStyles.Boldfont]}>You've recycled.</Text>
                 <Text style={[GlobalStyles.Boldfont]}>10 KG</Text>
+                </View>
                 
             </ImageBackground>
            

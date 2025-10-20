@@ -4,7 +4,7 @@ import { GlobalStyles } from '../Styles'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
-
+import Pointshower from "../Points/Components/pointsshower"
 const PointsHome = () => {
 
   console.log("Serach is pressed");
@@ -21,10 +21,10 @@ const PointsHome = () => {
         </View>
         </TouchableOpacity>
       </View>
-  
-      <Text>Points</Text>
-      <Text>Points</Text>
-      <Text>Points</Text>
+      <View style={style.dealsandpointcontainer}>
+        <Pointshower></Pointshower>
+
+      </View>
     </View>
   )
 }
@@ -37,8 +37,15 @@ const style=StyleSheet.create({
     height:"10%",
     padding:"2%",
     marginVertical:"2%"
-    
- 
+  },
+  dealsandpointcontainer:{
+    width:"100%",
+    textAlign:"center",
+    alignItems:"center",
+    height:"84%",
+    padding:"2%",
+    marginVertical:"2%",
+
   },
   Search:{
     borderRadius:80,
